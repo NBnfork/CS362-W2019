@@ -35,42 +35,21 @@ void testDriverDominion(int numPlayers, int testCase){
 	int k[10] = {adventurer, gardens, embargo, village, minion, salvager, cutpurse,
 				 sea_hag, tribute, smithy};
 	//Intialize unmutable gamestate
-	initializeGame(numPlayers, k, 30, &unmutable);
 	memset(&unmutable, 'z', sizeof(struct gameState));
+	initializeGame(numPlayers, k, 30, &unmutable);
 
-printf ("Rough guide to locations in structure:\n");
-  printf ("0: numPlayers\n");
-  printf ("%ld: supplyCount[0]\n", ((long)&(unmutable.supplyCount[0]))-((long)&unmutable));
-  printf ("%ld: embargoTokens[0]\n", ((long)&(unmutable.embargoTokens[0]))-((long)&unmutable));
-  printf ("%ld: hand[0][0]\n", ((long)&(unmutable.hand[0][0]))-(long)(&unmutable));
-  printf ("%ld: deck[0][0]\n", ((long)&(unmutable.deck[0][0]))-(long)(&unmutable));
-  printf ("%ld: discard[0][0]\n", ((long)&(unmutable.discard[0][0]))-(long)(&unmutable));
-  printf ("%ld: playerCards[0]\n", ((long)&(unmutable.playedCards[0]))-(long)(&unmutable));
+	//copy to mutable gamestate
+	memcpy (&mutable, &unmutable, sizeof(struct gameState));
+	testResult = memcmp(&mutable, &unmutable, sizeof(struct gameState));
+	asserttrue(testResult);
 
-  for (int i = 0; i < sizeof(struct gameState); i++) {
-    if (((char*)&unmutable)[i] == 'z') {
-      if (start == -1) {
-	start = i;
-      }
-    } else{
-    if (start != -1) {
-	if (start == (i-1)) {
-	  printf ("Byte %d uninitialized.\n", start);
-	} else {
-	  printf ("Bytes %d-%d uninitialized.\n", start, i-1);
+	testResult = myShuffleTest(2, &mutable, &unmutable);
+	if(testResult){
+		printf("**COMPLETED TESTING: shuffle**");
 	}
-	start = -1;
-      }
-    }
-  }
-
-  if (start != -1) {
-    if (start == (i-1)) {
-      printf ("Byte %d uninitialized.\n", start);
-    } else {
-      printf ("Bytes %d-%d uninitialized.\n", start, i-1);
-    }
-  }
+	else{
+		printf("**TEST SUITE ERROR: shuffle**");
+	}
 
 
 }

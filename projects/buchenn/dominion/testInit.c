@@ -58,17 +58,7 @@ int main (int argc, char** argv) {
     }
   }
 
-	//copy to mutable gamestate
-	memcpy (&mutable, &G, sizeof(struct gameState));
-  	testResult = memcmp(&mutable, &G, sizeof(struct gameState));
-  	asserttrue(testResult);
-	testResult = myShuffleTest(2, &mutable, &G);
-	if(testResult){
-		printf("**COMPLETED TESTING: shuffle**");
-	}
-	else{
-		printf("**TEST SUITE ERROR: shuffle**");
-	}
+
 
 
   return 0;

@@ -30,7 +30,7 @@ runtests: testShuffle
 	gcov dominion.c >> unittestresult.out.sample
 	cat dominion.c.gcov >> unittestresult.out.sample
 
-#add unit 2,3,4 card 1,2,3,4
+#add unit 2,3,4 card 3,4
 unitTests: dominion.o rngs.o unittest1.c myTestSuite.c cardtest1.c cardtest2.c
 	gcc -Wall -std=c99 -o unitTests myTestSuite.c unittest1.c cardtest1.c cardtest2.c -g dominion.o rngs.o $(CFLAGS)
 
@@ -38,6 +38,30 @@ unittestresults: unitTests
 	./unitTests | tee unittestresult.out
 	gcov -b dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
+
+randomtest1: dominion.o rngs.o myTestSuite.c randomtestcard1.c
+	gcc -Wall -std=c99 -o randomtest1 myTestSuite.c randomtestcard1.c -g dominion.o rngs.o $(CFLAGS)
+
+randomtest2: dominion.o rngs.o myTestSuite.c randomtestcard2.c
+	gcc -Wall -std=c99 -o randomtest2 myTestSuite.c randomtestcard2.c -g dominion.o rngs.o $(CFLAGS)
+
+randomtestAdv: dominion.o rngs.o myTestSuite.c randomtestadventurer.c
+	gcc -Wall -std=c99 -o randomtestadventurer myTestSuite.c randomtestadventurer.c -g dominion.o rngs.o $(CFLAGS)
+
+random1: randomtest1
+	./randomtest1 | tee randomtestcard1.out
+	gcov -b dominion.c >> randomtestcard1.out
+	cat dominion.c.gcov >> randomtestcard1.out
+
+random2: randomtest2
+	./randomtest2 | tee randomtestcard2.out
+	gcov -b dominion.c >> randomtestcard2.out
+	cat dominion.c.gcov >> randomtestcard2.out
+
+randomAdv: randomtestAdv
+	./randomtestadventurer | tee randomtestadventurer.out
+	gcov -b dominion.c >> randomtestadventurer.out
+	cat dominion.c.gcov >> randomtestadventurer.out
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

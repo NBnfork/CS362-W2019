@@ -16,11 +16,12 @@ int myShuffleTest(int numPlayers, struct gameState* mutable, struct gameState* u
 
 	//test normal coverage
 	result = shuffle(0, mutable);
-	asserttrue(result);
+	asserttrue(result == 0);
 	//test gamestate
-	qsort ((void*)(mutable->deck[0]), mutable->deckCount[0], sizeof(int), compare);
-	qsort ((void*)(unmutable->deck[0]), unmutable->deckCount[0], sizeof(int), compare);
+	insertSort(mutable->hand[0], mutable->handCount[0]);
+	insertSort(unmutable->hand[0], unmutable->handCount[0]);
 	result = memcmp(&mutable, &unmutable, sizeof(struct gameState));
+	printf("Memcmp results = %d", result);
 	asserttrue(result == 0);
 
 	//test shuffle changes order (use larger enough deck to increase assurance)
@@ -30,16 +31,16 @@ int myShuffleTest(int numPlayers, struct gameState* mutable, struct gameState* u
 			mutable->deck[m][j] = estate;
 			mutable->deckCount[m]++;
 		}
-		for (int j = 20; j < 30; j++) {
+		for (int k = 20; k < 30; k++) {
 
-			mutable->deck[m][j] = copper;
+			mutable->deck[m][k] = copper;
 			mutable->deckCount[m]++;
 		}
 	}
-	asserttrue(shuffle(0, mutable));
+	asserttrue((shuffle(0, mutable) == 0));
 
 	//test shuffle does not effect deckCount
-	asserttrue(mutable->deckCount[0] == 30);
+	asserttrue((mutable->deckCount[0] == 30));
 
 	//test deck cards are unchanged
 	//sort decks and compare
@@ -56,12 +57,12 @@ int myShuffleTest(int numPlayers, struct gameState* mutable, struct gameState* u
 			break;
 		}
 	}
-	asserttrue(result)
+	asserttrue((result == 1));
 
 	//test for empty deck conditional, set deck count to 0,
 	mutable->deckCount[0] = 0;
 	result = shuffle(0, mutable);
-	asserttrue(result == -1);
+	asserttrue((result == -1));
 
 	return 1;
 }

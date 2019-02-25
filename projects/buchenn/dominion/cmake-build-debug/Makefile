@@ -123,60 +123,6 @@ dominion/fast:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/build
 .PHONY : dominion/fast
 
-badTestDrawCard.o: badTestDrawCard.c.o
-
-.PHONY : badTestDrawCard.o
-
-# target to build an object file
-badTestDrawCard.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/badTestDrawCard.c.o
-.PHONY : badTestDrawCard.c.o
-
-badTestDrawCard.i: badTestDrawCard.c.i
-
-.PHONY : badTestDrawCard.i
-
-# target to preprocess a source file
-badTestDrawCard.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/badTestDrawCard.c.i
-.PHONY : badTestDrawCard.c.i
-
-badTestDrawCard.s: badTestDrawCard.c.s
-
-.PHONY : badTestDrawCard.s
-
-# target to generate assembly for a file
-badTestDrawCard.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/badTestDrawCard.c.s
-.PHONY : badTestDrawCard.c.s
-
-betterTestDrawCard.o: betterTestDrawCard.c.o
-
-.PHONY : betterTestDrawCard.o
-
-# target to build an object file
-betterTestDrawCard.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/betterTestDrawCard.c.o
-.PHONY : betterTestDrawCard.c.o
-
-betterTestDrawCard.i: betterTestDrawCard.c.i
-
-.PHONY : betterTestDrawCard.i
-
-# target to preprocess a source file
-betterTestDrawCard.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/betterTestDrawCard.c.i
-.PHONY : betterTestDrawCard.c.i
-
-betterTestDrawCard.s: betterTestDrawCard.c.s
-
-.PHONY : betterTestDrawCard.s
-
-# target to generate assembly for a file
-betterTestDrawCard.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/betterTestDrawCard.c.s
-.PHONY : betterTestDrawCard.c.s
-
 cardtest1.o: cardtest1.c.o
 
 .PHONY : cardtest1.o
@@ -312,33 +258,6 @@ dominion.c.s:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/dominion.c.s
 .PHONY : dominion.c.s
 
-interface.o: interface.c.o
-
-.PHONY : interface.o
-
-# target to build an object file
-interface.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/interface.c.o
-.PHONY : interface.c.o
-
-interface.i: interface.c.i
-
-.PHONY : interface.i
-
-# target to preprocess a source file
-interface.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/interface.c.i
-.PHONY : interface.c.i
-
-interface.s: interface.c.s
-
-.PHONY : interface.s
-
-# target to generate assembly for a file
-interface.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/interface.c.s
-.PHONY : interface.c.s
-
 myTestSuite.o: myTestSuite.c.o
 
 .PHONY : myTestSuite.o
@@ -366,60 +285,6 @@ myTestSuite.c.s:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/myTestSuite.c.s
 .PHONY : myTestSuite.c.s
 
-playdom.o: playdom.c.o
-
-.PHONY : playdom.o
-
-# target to build an object file
-playdom.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/playdom.c.o
-.PHONY : playdom.c.o
-
-playdom.i: playdom.c.i
-
-.PHONY : playdom.i
-
-# target to preprocess a source file
-playdom.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/playdom.c.i
-.PHONY : playdom.c.i
-
-playdom.s: playdom.c.s
-
-.PHONY : playdom.s
-
-# target to generate assembly for a file
-playdom.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/playdom.c.s
-.PHONY : playdom.c.s
-
-player.o: player.c.o
-
-.PHONY : player.o
-
-# target to build an object file
-player.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/player.c.o
-.PHONY : player.c.o
-
-player.i: player.c.i
-
-.PHONY : player.i
-
-# target to preprocess a source file
-player.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/player.c.i
-.PHONY : player.c.i
-
-player.s: player.c.s
-
-.PHONY : player.s
-
-# target to generate assembly for a file
-player.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/player.c.s
-.PHONY : player.c.s
-
 rngs.o: rngs.c.o
 
 .PHONY : rngs.o
@@ -446,168 +311,6 @@ rngs.s: rngs.c.s
 rngs.c.s:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/rngs.c.s
 .PHONY : rngs.c.s
-
-rt.o: rt.c.o
-
-.PHONY : rt.o
-
-# target to build an object file
-rt.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/rt.c.o
-.PHONY : rt.c.o
-
-rt.i: rt.c.i
-
-.PHONY : rt.i
-
-# target to preprocess a source file
-rt.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/rt.c.i
-.PHONY : rt.c.i
-
-rt.s: rt.c.s
-
-.PHONY : rt.s
-
-# target to generate assembly for a file
-rt.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/rt.c.s
-.PHONY : rt.c.s
-
-supplyTest.o: supplyTest.c.o
-
-.PHONY : supplyTest.o
-
-# target to build an object file
-supplyTest.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/supplyTest.c.o
-.PHONY : supplyTest.c.o
-
-supplyTest.i: supplyTest.c.i
-
-.PHONY : supplyTest.i
-
-# target to preprocess a source file
-supplyTest.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/supplyTest.c.i
-.PHONY : supplyTest.c.i
-
-supplyTest.s: supplyTest.c.s
-
-.PHONY : supplyTest.s
-
-# target to generate assembly for a file
-supplyTest.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/supplyTest.c.s
-.PHONY : supplyTest.c.s
-
-testBuyCard.o: testBuyCard.c.o
-
-.PHONY : testBuyCard.o
-
-# target to build an object file
-testBuyCard.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testBuyCard.c.o
-.PHONY : testBuyCard.c.o
-
-testBuyCard.i: testBuyCard.c.i
-
-.PHONY : testBuyCard.i
-
-# target to preprocess a source file
-testBuyCard.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testBuyCard.c.i
-.PHONY : testBuyCard.c.i
-
-testBuyCard.s: testBuyCard.c.s
-
-.PHONY : testBuyCard.s
-
-# target to generate assembly for a file
-testBuyCard.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testBuyCard.c.s
-.PHONY : testBuyCard.c.s
-
-testDrawCard.o: testDrawCard.c.o
-
-.PHONY : testDrawCard.o
-
-# target to build an object file
-testDrawCard.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testDrawCard.c.o
-.PHONY : testDrawCard.c.o
-
-testDrawCard.i: testDrawCard.c.i
-
-.PHONY : testDrawCard.i
-
-# target to preprocess a source file
-testDrawCard.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testDrawCard.c.i
-.PHONY : testDrawCard.c.i
-
-testDrawCard.s: testDrawCard.c.s
-
-.PHONY : testDrawCard.s
-
-# target to generate assembly for a file
-testDrawCard.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testDrawCard.c.s
-.PHONY : testDrawCard.c.s
-
-testInit.o: testInit.c.o
-
-.PHONY : testInit.o
-
-# target to build an object file
-testInit.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testInit.c.o
-.PHONY : testInit.c.o
-
-testInit.i: testInit.c.i
-
-.PHONY : testInit.i
-
-# target to preprocess a source file
-testInit.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testInit.c.i
-.PHONY : testInit.c.i
-
-testInit.s: testInit.c.s
-
-.PHONY : testInit.s
-
-# target to generate assembly for a file
-testInit.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testInit.c.s
-.PHONY : testInit.c.s
-
-testShuffle.o: testShuffle.c.o
-
-.PHONY : testShuffle.o
-
-# target to build an object file
-testShuffle.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testShuffle.c.o
-.PHONY : testShuffle.c.o
-
-testShuffle.i: testShuffle.c.i
-
-.PHONY : testShuffle.i
-
-# target to preprocess a source file
-testShuffle.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testShuffle.c.i
-.PHONY : testShuffle.c.i
-
-testShuffle.s: testShuffle.c.s
-
-.PHONY : testShuffle.s
-
-# target to generate assembly for a file
-testShuffle.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/testShuffle.c.s
-.PHONY : testShuffle.c.s
 
 unittest1.o: unittest1.c.o
 
@@ -726,12 +429,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... dominion"
 	@echo "... edit_cache"
-	@echo "... badTestDrawCard.o"
-	@echo "... badTestDrawCard.i"
-	@echo "... badTestDrawCard.s"
-	@echo "... betterTestDrawCard.o"
-	@echo "... betterTestDrawCard.i"
-	@echo "... betterTestDrawCard.s"
 	@echo "... cardtest1.o"
 	@echo "... cardtest1.i"
 	@echo "... cardtest1.s"
@@ -747,39 +444,12 @@ help:
 	@echo "... dominion.o"
 	@echo "... dominion.i"
 	@echo "... dominion.s"
-	@echo "... interface.o"
-	@echo "... interface.i"
-	@echo "... interface.s"
 	@echo "... myTestSuite.o"
 	@echo "... myTestSuite.i"
 	@echo "... myTestSuite.s"
-	@echo "... playdom.o"
-	@echo "... playdom.i"
-	@echo "... playdom.s"
-	@echo "... player.o"
-	@echo "... player.i"
-	@echo "... player.s"
 	@echo "... rngs.o"
 	@echo "... rngs.i"
 	@echo "... rngs.s"
-	@echo "... rt.o"
-	@echo "... rt.i"
-	@echo "... rt.s"
-	@echo "... supplyTest.o"
-	@echo "... supplyTest.i"
-	@echo "... supplyTest.s"
-	@echo "... testBuyCard.o"
-	@echo "... testBuyCard.i"
-	@echo "... testBuyCard.s"
-	@echo "... testDrawCard.o"
-	@echo "... testDrawCard.i"
-	@echo "... testDrawCard.s"
-	@echo "... testInit.o"
-	@echo "... testInit.i"
-	@echo "... testInit.s"
-	@echo "... testShuffle.o"
-	@echo "... testShuffle.i"
-	@echo "... testShuffle.s"
 	@echo "... unittest1.o"
 	@echo "... unittest1.i"
 	@echo "... unittest1.s"

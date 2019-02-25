@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/badTestDrawCard.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/betterTestDrawCard.c">
-			<Option target="dominion"/>
-		</Unit>
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/cardtest1.c">
 			<Option target="dominion"/>
 		</Unit>
@@ -107,46 +101,16 @@
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/dominion_helpers.h">
 			<Option target="dominion"/>
 		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/interface.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/interface.h">
-			<Option target="dominion"/>
-		</Unit>
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/myTestSuite.c">
 			<Option target="dominion"/>
 		</Unit>
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/myTestSuite.h">
 			<Option target="dominion"/>
 		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/playdom.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/player.c">
-			<Option target="dominion"/>
-		</Unit>
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/rngs.c">
 			<Option target="dominion"/>
 		</Unit>
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/rngs.h">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/rt.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/supplyTest.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/testBuyCard.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/testDrawCard.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/testInit.c">
-			<Option target="dominion"/>
-		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/testShuffle.c">
 			<Option target="dominion"/>
 		</Unit>
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/unittest1.c">

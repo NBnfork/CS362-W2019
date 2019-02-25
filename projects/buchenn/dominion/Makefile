@@ -15,8 +15,8 @@ testDrawCard: testDrawCard.c dominion.o rngs.o
 badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
 	gcc -o badTestDrawCard -g  badTestDrawCard.c dominion.o rngs.o $(CFLAGS)
 
-testBuyCard: testDrawCard.c dominion.o rngs.o
-	gcc -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
+testShuffle: testShuffle.c dominion.o rngs.o
+	gcc -o testShuffle -g  testShuffle.c dominion.o rngs.o $(CFLAGS)
 
 testAll: dominion.o testSuite.c
 	gcc -o testSuite testSuite.c -g  dominion.o rngs.o $(CFLAGS)
@@ -25,14 +25,14 @@ interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 #gcc -Wall -std=c99 -o  prog compare.c bst.c main.c -ftest-coverage -fpro    file-arcs
 
-runtests: testDrawCard 
-	./testDrawCard &> unittestresult.out.sample
+runtests: testShuffle
+	./testShuffle &> unittestresult.out.sample
 	gcov dominion.c >> unittestresult.out.sample
 	cat dominion.c.gcov >> unittestresult.out.sample
 
 #add unit 2,3,4 card 1,2,3,4
-unitTests: dominion.o rngs.o unittest1.c testInit.c
-	gcc -Wall -std=c99 -o unitTests testInit.c unittest1.c -g dominion.o rngs.o $(CFLAGS)
+unitTests: dominion.o rngs.o unittest1.c myTestSuite.c cardtest1.c cardtest2.c
+	gcc -Wall -std=c99 -o unitTests myTestSuite.c unittest1.c cardtest1.c cardtest2.c -g dominion.o rngs.o $(CFLAGS)
 
 unittestresults: unitTests
 	./unitTests | tee unittestresult.out

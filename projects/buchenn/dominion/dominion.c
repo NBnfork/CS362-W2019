@@ -2,8 +2,9 @@
 #include "dominion_helpers.h"
 #include "rngs.h"
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
+#include <math.h>
+
 
 int compare(const void *a, const void *b) {
   if (*(int*)a > *(int*)b)
@@ -1256,8 +1257,7 @@ adventurer, smithy, salvager, embargo */
       shuffle(currentPlayer, state);
     }
     drawCard(currentPlayer, state);
-    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] -
-                                           1];//top card of hand is most recently drawn card.
+    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] -1];//top card of hand is most recently drawn card.
     if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
       drawntreasure++;
     else {
@@ -1277,7 +1277,7 @@ adventurer, smithy, salvager, embargo */
 int useSmithy(int handPos, int currentPlayer, struct gameState* state )//+3 Cards
 {
   //drawn three cards
-  for (int i = 0; i <= 3 ; i++) {
+  for (int i = 0; i < 3 ; i++) {
     drawCard(currentPlayer, state);
   }
 

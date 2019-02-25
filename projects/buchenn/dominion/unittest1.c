@@ -14,20 +14,23 @@ int myShuffleTest(int numPlayers, struct gameState* mutable, struct gameState* u
 
 	int result = 1;
 
-	//test normal coverage
-	result = shuffle(0, mutable);
+	//test normal coverage use deck of player 2 because player 1 draws random cards during intialize
+	result = shuffle(1, mutable);
 	asserttrue(result == 0);
 	//test gamestate
-	insertSort(mutable->hand[0], mutable->handCount[0]);
-	insertSort(unmutable->hand[0], unmutable->handCount[0]);
-	result = memcmp(&mutable, &unmutable, sizeof(struct gameState));
+	qsort ((void*)(mutable->deck[1]), mutable->deckCount[1], sizeof(int), compare);
+	qsort ((void*)(unmutable->deck[1]), unmutable->deckCount[1], sizeof(int), compare);
+	result = memcmp(mutable, unmutable, sizeof(struct gameState));
 	printf("Memcmp results = %d", result);
 	asserttrue(result == 0);
 
-	//test shuffle changes order (use larger enough deck to increase assurance)
-	//add 20 more card to two decks
+	//test shuffle changes order (use larger deck to increase assurance)
+	//add of the exact same cards (30) to two decks overwriting existing decks
+	//reset deck counts
+	mutable->deckCount[0] = 0;
+	mutable->deckCount[1] = 0;
 	for (int m = 0; m < 2; ++m) {
-		for (int j = mutable->deckCount[m]; j < 20; j++) {
+		for (int j = 0; j < 20; j++) {
 			mutable->deck[m][j] = estate;
 			mutable->deckCount[m]++;
 		}

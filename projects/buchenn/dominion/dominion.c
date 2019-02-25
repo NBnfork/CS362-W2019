@@ -153,12 +153,12 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 
   //shuffle player decks
   for (i = 0; i < numPlayers; i++)
-    {
+  {
       if ( shuffle(i, state) < 0 )
 	{
 	  return -1;
 	}
-    }
+  }
 
   //draw player hands
   for (i = 0; i < numPlayers; i++)
@@ -1267,7 +1267,7 @@ adventurer, smithy, salvager, embargo */
     }
   }
   /*Bug* removed "=" from while statement*/
-  while (z - 1 > 0) {
+  while (z - 1 >= 0) {
     state->discard[currentPlayer][state->discardCount[currentPlayer]++] = tempHand[z - 1]; // discard all cards in play that have been drawn
     z = z - 1;
   }

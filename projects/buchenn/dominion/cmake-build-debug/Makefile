@@ -285,6 +285,33 @@ myTestSuite.c.s:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/myTestSuite.c.s
 .PHONY : myTestSuite.c.s
 
+randomtestcard1.o: randomtestcard1.c.o
+
+.PHONY : randomtestcard1.o
+
+# target to build an object file
+randomtestcard1.c.o:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard1.c.o
+.PHONY : randomtestcard1.c.o
+
+randomtestcard1.i: randomtestcard1.c.i
+
+.PHONY : randomtestcard1.i
+
+# target to preprocess a source file
+randomtestcard1.c.i:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard1.c.i
+.PHONY : randomtestcard1.c.i
+
+randomtestcard1.s: randomtestcard1.c.s
+
+.PHONY : randomtestcard1.s
+
+# target to generate assembly for a file
+randomtestcard1.c.s:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard1.c.s
+.PHONY : randomtestcard1.c.s
+
 rngs.o: rngs.c.o
 
 .PHONY : rngs.o
@@ -447,6 +474,9 @@ help:
 	@echo "... myTestSuite.o"
 	@echo "... myTestSuite.i"
 	@echo "... myTestSuite.s"
+	@echo "... randomtestcard1.o"
+	@echo "... randomtestcard1.i"
+	@echo "... randomtestcard1.s"
 	@echo "... rngs.o"
 	@echo "... rngs.i"
 	@echo "... rngs.s"

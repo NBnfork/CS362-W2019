@@ -12,6 +12,8 @@
 #define asserttrue(bool)if(bool > 0) printf("TEST SUCCESSFULLY COMPLETED.\n"); else printf("TEST FAILED: '" #bool  "' on line %d.\n", __LINE__);
 #define asserttruerandom(bool)if(bool > 0) successfulTests++; else printf("TEST FAILED ON LINE: %d.\n", __LINE__);
 
+int successfulTests;
+
 enum testCase { SHUFFLE = 1,
 		        DRAWCARD,
 		        DISCARDCARD,
@@ -20,8 +22,12 @@ enum testCase { SHUFFLE = 1,
 			    ADVENTURER,
 			    EMBARGO,
 			    SALVAGER };
-void initializeRandomGame(int, int*, int, struct gameState*);
+
+void initializeRandomState(int, int*, int, struct gameState*);
 void randomTestDriver (int numPlayers, int testCase);
+int randomTestSmithy(int numPlayers, struct gameState* mutable, struct gameState* unmutable);
+int randomTestAdventurer(int numPlayers, struct gameState* mutable, struct gameState* unmutable);
+
 void testDriverDominion(int numPlayers, int testCase);
 int myShuffleTest(int numPlayers, struct gameState* mutable, struct gameState* unmutable);
 int myDrawCardTest(int numPlayers, struct gameState* mutable, struct gameState* unmutable);

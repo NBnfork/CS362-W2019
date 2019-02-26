@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dominion.dir/cardtest2.c.o"
   "CMakeFiles/dominion.dir/cardtest3.c.o"
   "CMakeFiles/dominion.dir/cardtest4.c.o"
+  "CMakeFiles/dominion.dir/randomtestcard1.c.o"
   "dominion.pdb"
   "dominion"
 )

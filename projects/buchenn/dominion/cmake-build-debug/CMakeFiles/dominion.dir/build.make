@@ -213,18 +213,18 @@ CMakeFiles/dominion.dir/randomtestcard1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/dominion.dir/randomtestcard1.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestcard1.c -o CMakeFiles/dominion.dir/randomtestcard1.c.s
 
-CMakeFiles/dominion.dir/randomtestcard2.c.o: CMakeFiles/dominion.dir/flags.make
-CMakeFiles/dominion.dir/randomtestcard2.c.o: ../randomtestcard2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/dominion.dir/randomtestcard2.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/dominion.dir/randomtestcard2.c.o   -c /home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestcard2.c
+CMakeFiles/dominion.dir/randomtestadventurer.c.o: CMakeFiles/dominion.dir/flags.make
+CMakeFiles/dominion.dir/randomtestadventurer.c.o: ../randomtestadventurer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/dominion.dir/randomtestadventurer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/dominion.dir/randomtestadventurer.c.o   -c /home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestadventurer.c
 
-CMakeFiles/dominion.dir/randomtestcard2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/dominion.dir/randomtestcard2.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestcard2.c > CMakeFiles/dominion.dir/randomtestcard2.c.i
+CMakeFiles/dominion.dir/randomtestadventurer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/dominion.dir/randomtestadventurer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestadventurer.c > CMakeFiles/dominion.dir/randomtestadventurer.c.i
 
-CMakeFiles/dominion.dir/randomtestcard2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/dominion.dir/randomtestcard2.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestcard2.c -o CMakeFiles/dominion.dir/randomtestcard2.c.s
+CMakeFiles/dominion.dir/randomtestadventurer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/dominion.dir/randomtestadventurer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestadventurer.c -o CMakeFiles/dominion.dir/randomtestadventurer.c.s
 
 # Object files for target dominion
 dominion_OBJECTS = \
@@ -240,7 +240,7 @@ dominion_OBJECTS = \
 "CMakeFiles/dominion.dir/cardtest3.c.o" \
 "CMakeFiles/dominion.dir/cardtest4.c.o" \
 "CMakeFiles/dominion.dir/randomtestcard1.c.o" \
-"CMakeFiles/dominion.dir/randomtestcard2.c.o"
+"CMakeFiles/dominion.dir/randomtestadventurer.c.o"
 
 # External object files for target dominion
 dominion_EXTERNAL_OBJECTS =
@@ -257,7 +257,7 @@ dominion: CMakeFiles/dominion.dir/cardtest2.c.o
 dominion: CMakeFiles/dominion.dir/cardtest3.c.o
 dominion: CMakeFiles/dominion.dir/cardtest4.c.o
 dominion: CMakeFiles/dominion.dir/randomtestcard1.c.o
-dominion: CMakeFiles/dominion.dir/randomtestcard2.c.o
+dominion: CMakeFiles/dominion.dir/randomtestadventurer.c.o
 dominion: CMakeFiles/dominion.dir/build.make
 dominion: CMakeFiles/dominion.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable dominion"

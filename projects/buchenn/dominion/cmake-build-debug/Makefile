@@ -285,6 +285,33 @@ myTestSuite.c.s:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/myTestSuite.c.s
 .PHONY : myTestSuite.c.s
 
+randomtestadventurer.o: randomtestadventurer.c.o
+
+.PHONY : randomtestadventurer.o
+
+# target to build an object file
+randomtestadventurer.c.o:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestadventurer.c.o
+.PHONY : randomtestadventurer.c.o
+
+randomtestadventurer.i: randomtestadventurer.c.i
+
+.PHONY : randomtestadventurer.i
+
+# target to preprocess a source file
+randomtestadventurer.c.i:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestadventurer.c.i
+.PHONY : randomtestadventurer.c.i
+
+randomtestadventurer.s: randomtestadventurer.c.s
+
+.PHONY : randomtestadventurer.s
+
+# target to generate assembly for a file
+randomtestadventurer.c.s:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestadventurer.c.s
+.PHONY : randomtestadventurer.c.s
+
 randomtestcard1.o: randomtestcard1.c.o
 
 .PHONY : randomtestcard1.o
@@ -311,33 +338,6 @@ randomtestcard1.s: randomtestcard1.c.s
 randomtestcard1.c.s:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard1.c.s
 .PHONY : randomtestcard1.c.s
-
-randomtestcard2.o: randomtestcard2.c.o
-
-.PHONY : randomtestcard2.o
-
-# target to build an object file
-randomtestcard2.c.o:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard2.c.o
-.PHONY : randomtestcard2.c.o
-
-randomtestcard2.i: randomtestcard2.c.i
-
-.PHONY : randomtestcard2.i
-
-# target to preprocess a source file
-randomtestcard2.c.i:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard2.c.i
-.PHONY : randomtestcard2.c.i
-
-randomtestcard2.s: randomtestcard2.c.s
-
-.PHONY : randomtestcard2.s
-
-# target to generate assembly for a file
-randomtestcard2.c.s:
-	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard2.c.s
-.PHONY : randomtestcard2.c.s
 
 rngs.o: rngs.c.o
 
@@ -501,12 +501,12 @@ help:
 	@echo "... myTestSuite.o"
 	@echo "... myTestSuite.i"
 	@echo "... myTestSuite.s"
+	@echo "... randomtestadventurer.o"
+	@echo "... randomtestadventurer.i"
+	@echo "... randomtestadventurer.s"
 	@echo "... randomtestcard1.o"
 	@echo "... randomtestcard1.i"
 	@echo "... randomtestcard1.s"
-	@echo "... randomtestcard2.o"
-	@echo "... randomtestcard2.i"
-	@echo "... randomtestcard2.s"
 	@echo "... rngs.o"
 	@echo "... rngs.i"
 	@echo "... rngs.s"

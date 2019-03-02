@@ -107,10 +107,10 @@
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/myTestSuite.h">
 			<Option target="dominion"/>
 		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestcard1.c">
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestadventurer.c">
 			<Option target="dominion"/>
 		</Unit>
-		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestcard2.c">
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/randomtestcard1.c">
 			<Option target="dominion"/>
 		</Unit>
 		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/dominion/rngs.c">

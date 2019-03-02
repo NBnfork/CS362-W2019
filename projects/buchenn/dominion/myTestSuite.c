@@ -28,7 +28,7 @@
 
 
 void gainRandomCards(int supplyPos, struct gameState *state, int toFlag, int supplyLimit){
-	//state->supplyCount[supplyPos] = floor(Random() * supplyLimit);
+
 
 	//split between players
 	int cardsInPlay = supplyLimit - (floor(Random() * supplyLimit));
@@ -97,18 +97,18 @@ void initializeRandomState(int numPlayers,  int kingdomCards[10], int randomSeed
 	}
 	gainRandomCards(curse, state, 1, 10);
 
-	//set number of Victory cards
+	//get random number of Victory cards in each deck
 	gainRandomCards(estate, state, 1, 8);
 	gainRandomCards(duchy, state, 1, 8);
 	gainRandomCards(province, state, 1, 8);
 
-	//set number of Treasure cards
+	//get random number of Treasure cards in each deck
 	gainRandomCards(copper, state, 1, 46);
 	gainRandomCards(silver, state, 1, 40);
 	gainRandomCards(gold, state, 1, 30);
 
 
-	//set number of Kingdom cards
+	//get number of Kingdom cards in each deck
 	for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
 	{
 		for (j = 0; j < 10; j++)           		//loop chosen cards
@@ -157,16 +157,18 @@ void initializeRandomState(int numPlayers,  int kingdomCards[10], int randomSeed
 		//add some outposts
 		state->outpostPlayed = floor(Random() * 10);
 	}
-	//state must be 0 to test playing cards
+	//phase must be 0 to test using cards
 	state->phase = 0;
 	state->numActions = floor(Random()* 12);
 	state->numBuys = floor(Random()*12);
 	//all test run on player [0] for now TODO make whoseTurn random
 	state->playedCardCount = floor(Random() * state->deckCount[0]);
 	state->whoseTurn = 0;
-	state->handCount[state->whoseTurn] = floor(Random() * (25 - state->playedCardCount);
+	state->handCount[state->whoseTurn] = floor(Random() * (state->deckCount[0] - state->playedCardCount));
+	//check for negative handCount
+	//printf("HandCount: %d\n", state->handCount[state->whoseTurn]);
+	if(state->handCount[state->whoseTurn] < 0) state->handCount[state->whoseTurn] = 0;
 	state->discardCount[state->whoseTurn] = floor(Random() * state->deckCount[state->whoseTurn]);
-
 
 	int drawTotal = state->handCount[state->whoseTurn];
 	//Moved draw cards to here, only drawing at the start of a turn
@@ -326,27 +328,31 @@ void testDriverDominion(int numPlayers, int testCase){
 */
 int main(int argc, char** argv){
 
-
-	const int testRuns = 1000;
+	//enter number of test runs
+	const int TESTRUNS = 1000;
 
 	for (int j = 0; j < argc; ++j) {
 
 		if (strcmp(argv[j], "smithy") == 0) {
+			//enter number of asserts here (don't forget to +1 for the initialization assert)
+			const int ASSERTCOUNT = 4;
 			printf("**************************\nRunning: Random \"%s\" Tests\n**************************\n", argv[j]);
-			for (int i = 0; i < testRuns; ++i) {
+			for (int i = 0; i < TESTRUNS; ++i) {
 				randomTestDriver(2, SMITHY);
 			}
 			printf("**************************\n");
-			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, testRuns * 4);
+			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, TESTRUNS * ASSERTCOUNT);
 			printf("**************************\n");
 
 		} else if (strcmp(argv[j], "adventurer") == 0) {
+			//enter number of asserts here (don't forget to +1 for the initialization assert)
+			const int ASSERTCOUNT = 8;
 			printf("**************************\nRunning: Random \"%s\" Tests\n**************************\n", argv[j]);
-			for (int i = 0; i < testRuns; ++i) {
+			for (int i = 0; i < TESTRUNS; ++i) {
 				randomTestDriver(2, ADVENTURER);
 			}
 			printf("**************************\n");
-			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, testRuns * 4);
+			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, TESTRUNS * ASSERTCOUNT);
 			printf("**************************\n");
 		}
 	}

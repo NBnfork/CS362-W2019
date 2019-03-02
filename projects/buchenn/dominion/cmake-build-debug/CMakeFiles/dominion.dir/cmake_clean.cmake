@@ -11,7 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/dominion.dir/cardtest3.c.o"
   "CMakeFiles/dominion.dir/cardtest4.c.o"
   "CMakeFiles/dominion.dir/randomtestcard1.c.o"
-  "CMakeFiles/dominion.dir/randomtestcard2.c.o"
+  "CMakeFiles/dominion.dir/randomtestadventurer.c.o"
   "dominion.pdb"
   "dominion"
 )

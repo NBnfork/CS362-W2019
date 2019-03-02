@@ -312,6 +312,33 @@ randomtestcard1.c.s:
 	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard1.c.s
 .PHONY : randomtestcard1.c.s
 
+randomtestcard2.o: randomtestcard2.c.o
+
+.PHONY : randomtestcard2.o
+
+# target to build an object file
+randomtestcard2.c.o:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard2.c.o
+.PHONY : randomtestcard2.c.o
+
+randomtestcard2.i: randomtestcard2.c.i
+
+.PHONY : randomtestcard2.i
+
+# target to preprocess a source file
+randomtestcard2.c.i:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard2.c.i
+.PHONY : randomtestcard2.c.i
+
+randomtestcard2.s: randomtestcard2.c.s
+
+.PHONY : randomtestcard2.s
+
+# target to generate assembly for a file
+randomtestcard2.c.s:
+	$(MAKE) -f CMakeFiles/dominion.dir/build.make CMakeFiles/dominion.dir/randomtestcard2.c.s
+.PHONY : randomtestcard2.c.s
+
 rngs.o: rngs.c.o
 
 .PHONY : rngs.o
@@ -477,6 +504,9 @@ help:
 	@echo "... randomtestcard1.o"
 	@echo "... randomtestcard1.i"
 	@echo "... randomtestcard1.s"
+	@echo "... randomtestcard2.o"
+	@echo "... randomtestcard2.i"
+	@echo "... randomtestcard2.s"
 	@echo "... rngs.o"
 	@echo "... rngs.i"
 	@echo "... rngs.s"

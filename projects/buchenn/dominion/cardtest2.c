@@ -23,12 +23,14 @@ int playCardTestAdventurer(int numPlayers, struct gameState* mutable, struct gam
 	asserttrue((result == 0));
 	//check two cards drawn are treasure and discard them
 	int twoTreasuresDrawn = 0;//use as bool
-	if (mutable->hand[0][5] == copper || mutable->hand[0][5] == silver || mutable->hand[0][5] == gold)
-		if(mutable->hand[0][6] == copper || mutable->hand[0][6] == silver || mutable->hand[0][6] == gold)
+	if (mutable->hand[0][5] == copper || mutable->hand[0][5] == silver || mutable->hand[0][5] == gold) {
+		if (mutable->hand[0][6] == copper || mutable->hand[0][6] == silver || mutable->hand[0][6] == gold) {
 			mutable->hand[0][5] = unmutable->hand[0][5];
 			mutable->hand[0][6] = unmutable->hand[0][6];
 			mutable->handCount[0]--;
 			twoTreasuresDrawn = 1;
+		}
+	}
 	asserttrue((twoTreasuresDrawn == 1));
 	//test count of cards in hand (were the other cards drawn correctly discarded)
 	asserttrue((mutable->handCount[0] == 7));

@@ -164,7 +164,9 @@ void initializeRandomState(int numPlayers,  int kingdomCards[10], int randomSeed
 	//all test run on player [0] for now TODO make whoseTurn random
 	state->playedCardCount = floor(Random() * state->deckCount[0]);
 	state->whoseTurn = 0;
-	state->handCount[state->whoseTurn] = floor(Random() * 25);
+	state->handCount[state->whoseTurn] = floor(Random() * (25 - state->playedCardCount);
+	state->discardCount[state->whoseTurn] = floor(Random() * state->deckCount[state->whoseTurn]);
+
 
 	int drawTotal = state->handCount[state->whoseTurn];
 	//Moved draw cards to here, only drawing at the start of a turn
@@ -221,7 +223,7 @@ void randomTestDriver (int numPlayers, int testCase){
 		}
 			break;
 		case ADVENTURER: {
-		//	testResult = randomTestAdventurer(numPlayers, &mutable, &unmutable);
+			testResult = randomTestAdventurer(numPlayers, &mutable, &unmutable);
 			if (!testResult) {
 				printf("**TEST SUITE ERROR: Adventurer**\n");
 			}
@@ -322,33 +324,50 @@ void testDriverDominion(int numPlayers, int testCase){
 	}
 }
 */
-int main(){
+int main(int argc, char** argv){
+
 
 	const int testRuns = 1000;
-	printf("**************************\nRunning: Random Smithy Tests\n**************************\n");
-	for (int i = 0; i < testRuns; ++i) {
-		randomTestDriver(2,SMITHY);
-	}
-	printf("**************************\n");
-	printf("Successful Smithy Tests: %d of %d \n", successfulTests, testRuns * 4);
-	printf("**************************\n");
-	/*
-	//Unit testing
 
-	//TODO refactor into reading from function list a.k.a practice function pointers in C
-	// https://stackoverflow.com/questions/840501/how-do-function-pointers-in-c-work/840703#840703
-	//test for 2 or 3 players
-	//for (int numPlayers = 2; numPlayers < 4 ; ++numPlayers) {
-	int numPlayers = 2;
-		testDriverDominion(numPlayers, SHUFFLE);
-		//testDriverDominion(DRAWCARD);
-		//testDriverDominion(DISCARDCARD);
-		//testDriverDominion(FULLDECKCOUNT);
-		testDriverDominion(numPlayers, SMITHY);
-		testDriverDominion(numPlayers, ADVENTURER);
-		//testDriverDominion(EMBARGO);
-		//testDriverDominion(SALVAGER);
-	//}
-	 */
+	for (int j = 0; j < argc; ++j) {
+
+		if (strcmp(argv[j], "smithy") == 0) {
+			printf("**************************\nRunning: Random \"%s\" Tests\n**************************\n", argv[j]);
+			for (int i = 0; i < testRuns; ++i) {
+				randomTestDriver(2, SMITHY);
+			}
+			printf("**************************\n");
+			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, testRuns * 4);
+			printf("**************************\n");
+
+		} else if (strcmp(argv[j], "adventurer") == 0) {
+			printf("**************************\nRunning: Random \"%s\" Tests\n**************************\n", argv[j]);
+			for (int i = 0; i < testRuns; ++i) {
+				randomTestDriver(2, ADVENTURER);
+			}
+			printf("**************************\n");
+			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, testRuns * 4);
+			printf("**************************\n");
+		}
+	}
+		/*
+		//Unit testing
+
+		//TODO refactor into reading from function list a.k.a practice function pointers in C
+		// https://stackoverflow.com/questions/840501/how-do-function-pointers-in-c-work/840703#840703
+		//test for 2 or 3 players
+		//for (int numPlayers = 2; numPlayers < 4 ; ++numPlayers) {
+		int numPlayers = 2;
+			testDriverDominion(numPlayers, SHUFFLE);
+			//testDriverDominion(DRAWCARD);
+			//testDriverDominion(DISCARDCARD);
+			//testDriverDominion(FULLDECKCOUNT);
+			testDriverDominion(numPlayers, SMITHY);
+			testDriverDominion(numPlayers, ADVENTURER);
+			//testDriverDominion(EMBARGO);
+			//testDriverDominion(SALVAGER);
+		//}
+		 */
+
 	return 0;
 }

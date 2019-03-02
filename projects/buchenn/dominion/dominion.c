@@ -1277,7 +1277,7 @@ adventurer, smithy, salvager, embargo */
 int useSmithy(int handPos, int currentPlayer, struct gameState* state )//+3 Cards
 {
   //drawn three cards
-  for (int i = 0; i <= 3 ; i++) {
+  for (int i = 0; i < 3 ; i++) {
     drawCard(currentPlayer, state);
   }
 

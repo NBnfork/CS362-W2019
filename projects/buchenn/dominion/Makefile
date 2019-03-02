@@ -48,6 +48,11 @@ randomtest2: dominion.o rngs.o myTestSuite.c randomtestcard2.c
 randomtestAdv: dominion.o rngs.o myTestSuite.c randomtestadventurer.c
 	gcc -Wall -std=c99 -o randomtestadventurer myTestSuite.c randomtestadventurer.c -g dominion.o rngs.o $(CFLAGS)
 
+#add random2 when complete
+randomtestAll: dominion.o rngs.o myTestSuite.c randomtestadventurer.c randomtestcard1.c
+	gcc -Wall -std=c99 -o randomtest1 myTestSuite.c randomtestadventurer.c randomtestcard1.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -Wall -std=c99 -o randomtestadventurer myTestSuite.c randomtestadventurer.c randomtestcard1.c -g dominion.o rngs.o $(CFLAGS)
+
 random1: randomtest1
 	./randomtest1 | tee randomtestcard1.out
 	gcov -b dominion.c >> randomtestcard1.out
@@ -63,6 +68,13 @@ randomAdv: randomtestAdv
 	gcov -b dominion.c >> randomtestadventurer.out
 	cat dominion.c.gcov >> randomtestadventurer.out
 
+randomAll: randomtestAll
+	./randomtest1 smithy| tee randomtestcard1.out
+	gcov -b dominion.c >> randomtestcard1.out
+	cat dominion.c.gcov >> randomtestcard1.out
+	./randomtestadventurer adventurer | tee randomtestadventurer.out
+	gcov -b dominion.c >> randomtestadventurer.out
+	cat dominion.c.gcov >> randomtestadventurer.out
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 

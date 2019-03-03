@@ -1257,7 +1257,7 @@ adventurer, smithy, salvager, embargo */
       shuffle(currentPlayer, state);
     }
     drawCard(currentPlayer, state);
-    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] -1];//top card of hand is most recently drawn card.
+    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] - 1];//top card of hand is most recently drawn card.
     if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
       drawntreasure++;
     else {
@@ -1266,8 +1266,7 @@ adventurer, smithy, salvager, embargo */
       z++;
     }
   }
-  /*Bug* removed "=" from while statement*/
-  while (z - 1 >= 0) {
+  while (z - 1 > 0) {
     state->discard[currentPlayer][state->discardCount[currentPlayer]++] = tempHand[z - 1]; // discard all cards in play that have been drawn
     z = z - 1;
   }

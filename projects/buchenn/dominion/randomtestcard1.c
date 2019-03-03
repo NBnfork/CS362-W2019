@@ -12,11 +12,10 @@
 int randomTestSmithy(int numPlayers, struct gameState* mutable, struct gameState* unmutable){
 
 	int result = 1;
-	int preHandCount = 0;
-
 	//test basic function
-	//save handCount
-	preHandCount = mutable->handCount[0];
+	//save handCount, playedCard
+	int preHandCount = mutable->handCount[0];
+	int prePlayedCount = mutable->playedCardCount;
 	//put Smithy into hand which is intialized with random number of cards
 	mutable->hand[0][mutable->handCount[0]] = smithy;
 	mutable->handCount[0]++;
@@ -25,10 +24,13 @@ int randomTestSmithy(int numPlayers, struct gameState* mutable, struct gameState
 	asserttruerandom((result == 0));
 	//test hand size == +3
 	asserttruerandom((mutable->handCount[0] == preHandCount + 3));
+	//check Smithy is in playedCardPile
+	asserttruerandom((mutable->playedCardCount == prePlayedCount + 1));
+	asserttruerandom((mutable->playedCards[mutable->playedCardCount] == smithy));
 	//reset last card in deck from -1 (behavior from discardCard())
 	mutable->hand[0][mutable->handCount[0]] = unmutable->hand[0][preHandCount];
 	//remove three drawn cards from hand and put back in deck
-	for (int i = 0; i < 3; ++i) {
+	for (int i = 0; i <= 3; ++i) {
 		mutable->deck[0][mutable->deckCount[0]] = mutable->hand[0][mutable->handCount[0] - 1];
 		mutable->hand[0][mutable->handCount[0] - 1] = unmutable->hand[2][0];
 		mutable->handCount[0]--;

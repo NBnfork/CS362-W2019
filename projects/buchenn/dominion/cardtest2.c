@@ -21,24 +21,28 @@ int playCardTestAdventurer(int numPlayers, struct gameState* mutable, struct gam
 	//call useAdventurer(handpos, player, gamestate)
 	result = useAdventurer(0, mutable, temphand);
 	asserttrue((result == 0));
+	//check adventurer is in playedCardPile
+	asserttrue((mutable->playedCards[0] == adventurer));
+	//test count of cards in hand (were the other cards drawn correctly discarded)
+	asserttrue((mutable->handCount[0] == 7));
 	//check two cards drawn are treasure and discard them
-	int twoTreasuresDrawn = 0;//use as bool
+	int twoTreasuresDrawn = 0;//use as flag
 	if (mutable->hand[0][5] == copper || mutable->hand[0][5] == silver || mutable->hand[0][5] == gold) {
 		if (mutable->hand[0][6] == copper || mutable->hand[0][6] == silver || mutable->hand[0][6] == gold) {
+			//set flag
+			twoTreasuresDrawn = 1;
+			//discard to reset gamestate
 			mutable->hand[0][5] = unmutable->hand[0][5];
 			mutable->hand[0][6] = unmutable->hand[0][6];
-			mutable->handCount[0]--;
-			twoTreasuresDrawn = 1;
+			mutable->handCount[0] -= 2;
 		}
 	}
 	asserttrue((twoTreasuresDrawn == 1));
-	//test count of cards in hand (were the other cards drawn correctly discarded)
-	asserttrue((mutable->handCount[0] == 7));
+
 
 	//test shuffle conditional, set deckCount to 0
 	mutable->deckCount[0] = 0;
-
-	/*
+	asserttrue(result = useAdventurer(0, mutable, temphand))
 	//test gameState
 	//reset deckCount (behavior from useAdventure)
 	mutable->deckCount[0] = 5;
@@ -56,7 +60,7 @@ int playCardTestAdventurer(int numPlayers, struct gameState* mutable, struct gam
 	result = memcmp(mutable, unmutable, sizeof(struct gameState));
 	printf("Memcmp results = %d", result);
 	asserttrue((result == 0));
-	*/
+
 
 	return 1;
 }

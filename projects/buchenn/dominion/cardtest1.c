@@ -24,6 +24,10 @@ int playCardTestSmithy(int numPlayers, struct gameState* mutable, struct gameSta
 	asserttrue((result == 0));
 	//check hand size should be +3
 	asserttrue((mutable->handCount[0] == 8));
+	//check Smithy is in playedCardPile
+	asserttrue((mutable->playedCardCount == 1));
+	asserttrue((mutable->playedCards[0] == smithy));
+
 	//reset last card in deck from -1 (behavior from discardCard())
 	mutable->hand[0][mutable->handCount[0]] = unmutable->hand[0][5];
 	//check hand has 3 cards from actual deck (should only be coppers and estates) and then "discard" them

@@ -29,16 +29,20 @@
 
 void gainRandomCards(int supplyPos, struct gameState *state, int toFlag, int supplyLimit){
 
-
 	//split between players
 	int cardsInPlay = supplyLimit - (floor(Random() * supplyLimit));
 	int playerOneGets = cardsInPlay - (floor(Random() * cardsInPlay));
 	for (int k = 0; k < cardsInPlay; ++k) {
 		if (playerOneGets){
-			gainCard(supplyPos, state, toFlag, 0);
+			//limit deck size to 70
+			if(state->deckCount[0] <= 70) {
+				gainCard(supplyPos, state, toFlag, 0);
+			}
 			playerOneGets--;
 		}else
-			gainCard(supplyPos, state, toFlag, 1);
+			if(state->deckCount[0] <= 70) {
+				gainCard(supplyPos, state, toFlag, 1);
+			}
 	}
 }
 void initializeRandomState(int numPlayers,  int kingdomCards[10], int randomSeed,
@@ -109,7 +113,8 @@ void initializeRandomState(int numPlayers,  int kingdomCards[10], int randomSeed
 
 
 	//get number of Kingdom cards in each deck
-	for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
+	for (i = adventurer; i <= treasure_map; i++)
+		//loop all cards
 	{
 		for (j = 0; j < 10; j++)           		//loop chosen cards
 		{
@@ -159,12 +164,16 @@ void initializeRandomState(int numPlayers,  int kingdomCards[10], int randomSeed
 	}
 	//phase must be 0 to test using cards
 	state->phase = 0;
-	state->numActions = floor(Random()* 12);
-	state->numBuys = floor(Random()*12);
+	state->numActions = floor(Random()* 10);
+	state->numBuys = floor(Random()*10);
+	state->whoseTurn = 0;
 	//all test run on player [0] for now TODO make whoseTurn random
 	state->playedCardCount = floor(Random() * state->deckCount[0]);
-	state->whoseTurn = 0;
-	state->handCount[state->whoseTurn] = floor(Random() * (state->deckCount[0] - state->playedCardCount));
+	state->handCount[state->whoseTurn] = floor(Random() * 15);
+	while(state->handCount[state->whoseTurn] + state->playedCardCount > state->deckCount[whoseTurn(state)]){
+		state->playedCardCount = floor(Random() * state->deckCount[0]);
+		state->handCount[state->whoseTurn] = floor(Random() * 15);
+	}
 	//check for negative handCount
 	//printf("HandCount: %d\n", state->handCount[state->whoseTurn]);
 	if(state->handCount[state->whoseTurn] < 0) state->handCount[state->whoseTurn] = 0;
@@ -178,6 +187,8 @@ void initializeRandomState(int numPlayers,  int kingdomCards[10], int randomSeed
 
 	updateCoins(state->whoseTurn, state, 0);
 }
+//random testing
+
 void randomTestDriver (int numPlayers, int testCase){
 
 	struct gameState unmutable;
@@ -195,15 +206,8 @@ void randomTestDriver (int numPlayers, int testCase){
 		k[i] = cardToAdd;
 	}
 
-	/*
-	//set last 7 kingdom cards at random
-	int k[10] = {salvager, smithy, adventurer};
-	for (int i = 3; i < 10; ++i) {
-		k[i] =
-
-	}*/
 	//produce random seed
-	int seed = floor(Random() * 100);
+	int seed = floor((Random() * 99999999) + 1);
 
 	//Intialize mutable gamestate
 	memset(&mutable, 'z', sizeof(struct gameState));
@@ -231,8 +235,18 @@ void randomTestDriver (int numPlayers, int testCase){
 			}
 		}
 			break;
+		case EMBARGO:{
+
+			testResult = randomTestEmbargo(numPlayers, &mutable, &unmutable);
+			if (!testResult) {
+				printf("**TEST SUITE ERROR: Embargo**\n");
+			}
+		}
+			break;
+		}
 	}
-}
+
+//unit testing
 /*
 void testDriverDominion(int numPlayers, int testCase){
 
@@ -323,22 +337,33 @@ void testDriverDominion(int numPlayers, int testCase){
 			}
 		}
 			break;
-	}
-}
-*/
+		case EMBARGO: {
+			testResult = playCardTestEmbargo(numPlayers, &mutable, &unmutable);
+				if (testResult) {
+					printf("**COMPLETED TESTING: Embargo**\n");
+				} else {
+					printf("**TEST SUITE ERROR: Embargo**\n");
+				}
+			}
+			break;
+		}
+}*/
+
 int main(int argc, char** argv){
 
+	//Random Tester
 	//enter number of test runs
-	const int TESTRUNS = 1000;
+	const int TESTRUNS = 100000;
 
 	for (int j = 0; j < argc; ++j) {
 
 		if (strcmp(argv[j], "smithy") == 0) {
 			//enter number of asserts here (don't forget to +1 for the initialization assert)
-			const int ASSERTCOUNT = 4;
+			const int ASSERTCOUNT = 7;
 			printf("**************************\nRunning: Random \"%s\" Tests\n**************************\n", argv[j]);
 			for (int i = 0; i < TESTRUNS; ++i) {
 				randomTestDriver(2, SMITHY);
+				testCounter++;
 			}
 			printf("**************************\n");
 			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, TESTRUNS * ASSERTCOUNT);
@@ -346,15 +371,32 @@ int main(int argc, char** argv){
 
 		} else if (strcmp(argv[j], "adventurer") == 0) {
 			//enter number of asserts here (don't forget to +1 for the initialization assert)
-			const int ASSERTCOUNT = 8;
+			const int ASSERTCOUNT = 5;
 			printf("**************************\nRunning: Random \"%s\" Tests\n**************************\n", argv[j]);
 			for (int i = 0; i < TESTRUNS; ++i) {
 				randomTestDriver(2, ADVENTURER);
+				testCounter++;
 			}
 			printf("**************************\n");
 			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, TESTRUNS * ASSERTCOUNT);
 			printf("**************************\n");
+
+
+		} else if (strcmp(argv[j], "embargo") == 0) {
+			//enter number of asserts here (don't forget to +1 for the initialization assert)
+			const int ASSERTCOUNT = 7;
+			printf("**************************\nRunning: Random \"%s\" Tests\n**************************\n", argv[j]);
+			for (int i = 0; i < TESTRUNS; ++i) {
+				randomTestDriver(2, EMBARGO);
+				testCounter++;
+			}
+			printf("**************************\n");
+			printf("Successful \"%s\" Tests: %d of %d \n", argv[j], successfulTests, TESTRUNS * ASSERTCOUNT);
+			printf("**************************\n");
+
 		}
+
+
 	}
 		/*
 		//Unit testing
@@ -370,10 +412,10 @@ int main(int argc, char** argv){
 			//testDriverDominion(FULLDECKCOUNT);
 			testDriverDominion(numPlayers, SMITHY);
 			testDriverDominion(numPlayers, ADVENTURER);
-			//testDriverDominion(EMBARGO);
+			testDriverDominion(numPlayers, EMBARGO);
 			//testDriverDominion(SALVAGER);
 		//}
-		 */
 
+*/
 	return 0;
 }

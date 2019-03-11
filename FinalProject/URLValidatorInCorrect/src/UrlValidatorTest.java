@@ -40,7 +40,8 @@ public class UrlValidatorTest extends TestCase {
         String portColon = ":";
 
         //goodpaths just need slashes and randomstrings
-        String[] slash = new String[] {"", "/", "/"};
+        Str
+        ing[] slash = new String[] {"", "/", "/"};
 
         //goodQueries = ? string = string ; etc.
         char qMark = '?';

@@ -18,4 +18,13 @@ int useSalvager(int choice1, int handPos, int currentPlayer, struct gameState* s
 int useEmbargo(int choice1, int handPos, int currentPlayer, struct gameState* state);
 int useCutpurse(int handPos, int currentPlayer, struct gameState* state);
 
+
+//Egan's refractor function headers
+
+int adventurerCardEffect(struct gameState *state, int currentPlayer);
+int smithyCardEffect(struct gameState *state, int currentPlayer, int handPos);
+int villageCardEffect(struct gameState *state, int currentPlayer, int handPos);
+int feastCardEffect(struct gameState *state, int currentPlayer, int choice1);
+int tributeCardEffect(struct gameState *state, int currentPlayer);
+/* Card effects for the adventurer, smithy, village, feast, and tribute */
 #endif

@@ -353,7 +353,7 @@ int main(int argc, char** argv){
 
 	//Random Tester
 	//enter number of test runs
-	const int TESTRUNS = 100000;
+	const int TESTRUNS = 10;
 
 	for (int j = 0; j < argc; ++j) {
 

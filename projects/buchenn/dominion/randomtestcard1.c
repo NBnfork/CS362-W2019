@@ -19,8 +19,8 @@ int randomTestSmithy(int numPlayers, struct gameState* mutable, struct gameState
 	//put Smithy into hand which is intialized with random number of cards
 	mutable->hand[0][mutable->handCount[0]] = smithy;
 	mutable->handCount[0]++;
-	//use Smithy(handpos, player, gamestate)
-	result = useSmithy(mutable->handCount[0] - 1 , 0, mutable);
+	//use smithyCardEffect(gamestate, mutable, handpos)
+	result = smithyCardEffect(mutable, 0, mutable->handCount[0] - 1);
 	asserttruerandom((result == 0));
 	//test hand size == +3
 	asserttruerandom((mutable->handCount[0] == preHandCount + 3));

@@ -21,8 +21,8 @@ int randomTestAdventurer(int numPlayers, struct gameState* mutable, struct gameS
 //add adventurer to hand
 	mutable->hand[0][mutable->handCount[0]] = adventurer;
 	mutable->handCount[0]++;
-//call useAdventurer(handpos, player, gamestate)
-	result = useAdventurer(0, mutable, temphand);
+//call adventurerCardEffect(gamestate, currentPlayer)
+	result = adventurerCardEffect(mutable, 0);
 	asserttruerandom((result == 0));
 //check two cards drawn are treasure and discard them
 	int twoTreasuresDrawn = 0;//use as bool

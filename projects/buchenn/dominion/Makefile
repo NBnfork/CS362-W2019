@@ -50,9 +50,8 @@ randomtestAdv: dominion.o rngs.o myTestSuite.c randomtestadventurer.c
 
 #add random2 when complete
 randomtestAll: dominion.o rngs.o myTestSuite.c randomtestadventurer.c randomtestcard1.c
-	gcc -Wall -std=c99 -o randomtest1 myTestSuite.c randomtestadventurer.c randomtestcard1.c randomtestcard2.c -g dominion.o rngs.o $(CFLAGS)
-	gcc -Wall -std=c99 -o randomtestadventurer myTestSuite.c randomtestadventurer.c randomtestcard1.c randomtestcard2.c -g dominion.o rngs.o $(CFLAGS)
-	gcc -Wall -std=c99 -o randomtest2 myTestSuite.c randomtestadventurer.c randomtestcard1.c randomtestcard2.c -g dominion.o rngs.o $(CFLAGS)
+	gcc -Wall -std=c99 -o randomtest1 myTestSuite.c randomtestadventurer.c randomtestcard1.c  -g dominion.o rngs.o $(CFLAGS)
+	gcc -Wall -std=c99 -o randomtestadventurer myTestSuite.c randomtestadventurer.c randomtestcard1.c -g dominion.o rngs.o $(CFLAGS)
 
 random1: randomtest1
 	./randomtest1 smithy| tee randomtestcard1.out

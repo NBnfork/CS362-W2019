@@ -235,14 +235,6 @@ void randomTestDriver (int numPlayers, int testCase){
 			}
 		}
 			break;
-		case EMBARGO:{
-
-			testResult = randomTestEmbargo(numPlayers, &mutable, &unmutable);
-			if (!testResult) {
-				printf("**TEST SUITE ERROR: Embargo**\n");
-			}
-		}
-			break;
 		}
 	}
 

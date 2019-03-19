@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="dominion"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dominion">
+				<Option output="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/dominion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 dominion"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dominion/fast">
+				<Option output="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/dominion" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 dominion/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/Makefile">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/badTestDrawCard.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/betterTestDrawCard.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cardtest1.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cardtest2.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cardtest3.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/cardtest4.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/dominion.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/dominion.h">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/dominion_helpers.h">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/interface.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/interface.h">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/myTestSuite.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/myTestSuite.h">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/playdom.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/player.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/randomtestadventurer.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/randomtestcard1.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/randomtestcard2.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/rngs.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/rngs.h">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/rt.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/supplyTest.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/testBuyCard.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/testDrawCard.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/testInit.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/testShuffle.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/unittest1.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/unittest2.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/unittest3.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/unittest4.c">
+			<Option target="dominion"/>
+		</Unit>
+		<Unit filename="/home/noah2017/Documents/CS362-W2019/projects/buchenn/eganch/dominion/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
